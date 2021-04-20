@@ -1,0 +1,11 @@
+.empInfo{
+
+    border: 2px solid red;
+    background-color: rgb(224, 119, 14);
+    margin-left: 20px;
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    box-shadow: 2px 3px 1px gray;
+}
