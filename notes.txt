@@ -1,0 +1,70 @@
+Props
+Props are short for properties. 
+It is a React built-in object which stores the value of a tag’s attributes and
+ works similar to the HTML attributes. It provides a way to pass data from one 
+ component to other components in the same way as arguments are passed in a function.
+
+
+
+
+•	Functional Components: These components have no state of their own. and
+  only contain a render method, so they are also called stateless components.
+  They may derive data from other components as props (properties).
+  function Greeting(props) {
+  return <h1>Welcome to {props.name}</h1>;
+}
+
+
+Akshara Xworkz5:03 PM //-------------------------------------
+
+import Personal from "./Personal";
+import Address from "./Address";
+
+function EmpContainer() {
+    const empName = ["Sindhu", 'Arun', 'kumar'];
+    const eid = ["WipHCl980", 'hj7', '908'];
+    const skills = ['java', 'react', 'html'];
+    const addres={
+        place:'hassan',
+        pin:9870
+    }
+    const addres1={
+        place:'Shimoga',
+        pin:43235
+    }
+    return (
+        <div>
+            <h1>Employee Information</h1>
+          
+            <Personal
+                empName={emp
+ReactDOM.render(<EmpContainer/>,
+  document.getElementById('root')
+);
+--------------------------------------------------------------
+function Address(props) {
+    console.log(props);
+    
+    return (
+        <div>
+ <h2>Display Address info</h2>
+        <h3>Place:{props.addres.place}</h3>
+        <h3>Picode:{props.addres.pin}</h3>
+        </div>
+       
+    )
+}
+export default Address;
+-------------------------------------------------------------
+
+function Personal(props) {
+    return (
+        <div>
+ <h2>Display Personal info</h2>
+ <h2>Name:{props.empName}</h2>
+ <h2>EID:{props.eid}</h2>
+        </div>
+       
+    )
+}
+export default Personal;

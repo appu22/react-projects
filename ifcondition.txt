@@ -1,0 +1,112 @@
+12/04/21
+jar
+
+
+react class--------
+
+Akshara Xworkz6:11 PM
+addNum(){
+        this.setState({
+            result:(this.state.num1+this.state.num2)
+        })
+    }
+ <Calculate
+                addNum={this.addNum}
+                />
+import React from 'react'
+
+class Calculate extends React.Component{
+
+    render(){
+        return(
+            <div>
+                <p>Its from Calci</p>
+                <button onClick={this.props.addNum}>Add</button>
+            </div>
+        )
+    }
+}
+export default Calculate;
+
+
+*******************************************************************
+13/04/21
+
+function LoginController(props){
+        <h1>LoginController...</h1>
+        if(props.isLogged){
+            return <AdminLogin/>
+        }
+        else {
+            return <UserLogin/>
+        }
+    
+}
+export default LoginController;
+**************************************************************
+import React from 'react'
+import LoginPage from './Login';
+import HomePage from './Home';
+
+class LoginController extends React.Component {
+    constructor(props){
+        super(props);
+        this.state={
+            isLogged:false
+        }
+        this.login=this.login.bind(this);
+        this.logout=this.logout.bind(this);
+    }
+    login(){
+        this.setState({
+            isLogged:true
+        })
+    }
+    logout(){
+        this.setState({
+            isLogged:false
+        })
+    }
+******************************************************
+{
+                   this.state.admin.length >0 &&  
+                   <h1>Total-{this.state.admin.length} Admin got access  </h1>
+         }	
+	
+	
+	
+	
+
+
+***************************************************************************
+function LoginPage(props){
+    return(
+        <div>
+            <h2>Please signIn to my App...</h2>
+            <button onClick={props.login}>Login..!</button>
+        </div>
+    )
+}
+export default LoginPage;
+function HomePage(props){
+    return(
+        <div>
+            <h2>Welcome Back to my App...</h2>
+            <button onClick={props.logout} >SignOut..!</button>
+        </div>
+    )
+}
+export default HomePage;
+****************************************************************************
+ternary
+<h1>This user { this.state.isLogged ? 'currently':'Not'} Logged In</h1>
+***************************************************************************
+  isHideShow=()=>{
+        this.setState({
+            isHide:!this.state.isHide
+        })
+    }
+	**********************
+	<button onClick={()=>this.isHideShow()}> 
+               {this.state.isHide ?'Show':'Hide'}
+               </button>
